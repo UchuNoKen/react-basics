@@ -3,7 +3,7 @@ import "../css/styles.css";
 
 class Header extends Component {
   state = {
-    active: false,
+    active: "active",
     keywords: ""
   };
 
@@ -11,7 +11,7 @@ class Header extends Component {
     // console.log("input change registered");
     // console.log(event.target.value);
 
-    const value = event.target.value === "" ? false : true;
+    const value = event.target.value === "" ? "active" : "non-active";
     this.setState({
       active: value,
       keywords: event.target.value
@@ -33,7 +33,7 @@ class Header extends Component {
     // }
 
     return (
-      <header style={{ background: `${this.state.active ? "red" : "blue"}` }}>
+      <header className={this.state.active}>
         <div className="logo">Logo</div>
         <input type="text" onChange={this.inputChangeHandler} />
       </header>
