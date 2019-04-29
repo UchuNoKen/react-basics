@@ -16,8 +16,20 @@ class Header extends Component {
 
   render() {
     //console.log(this.state.keywords);
+
+    // styles in an object variable
+    // const style = {
+    //   background: "red"
+    // };
+
+    // if (this.state.keywords != "") {
+    //   style.background = "blue";
+    // } else {
+    //   style.background = "red";
+    // }
+
     return (
-      <header>
+      <header style={{ background: "red" }}>
         <div className="logo">Logo</div>
         <input type="text" onChange={this.inputChangeHandler} />
       </header>
