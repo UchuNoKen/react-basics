@@ -6,6 +6,7 @@ const NewsItem = ({ item }) => {
 
   let news_item = css({
     color: "white",
+    fontFamily: "Helvetica",
     padding: "20px",
     boxSizing: "border-box",
     borderBottom: "1px solid aliceBlue",
@@ -22,7 +23,7 @@ const NewsItem = ({ item }) => {
   });
 
   return (
-    <div {...news_item} {...item_grey}>
+    <div className={`${news_item} ${item_grey}`}>
       <h3>{item.title}</h3>
       <div>{item.feed}</div>
     </div>
